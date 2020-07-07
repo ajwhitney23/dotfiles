@@ -1,2 +1,2 @@
 # dotfiles
-dotfiles for popOS/i3-gaps
+dotfiles for my laptop running Pop_OS! and i3-gaps.
