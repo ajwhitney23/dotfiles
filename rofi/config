@@ -1,0 +1,19 @@
+rofi.modi: window,run,ssh,drun
+rofi.dpi: 120
+rofi.font: Hack 22
+rofi.terminal: uxvrt
+rofi.show-icons: true
+rofi.matching: fuzzy
+rofi.lines: 8
+rofi.columns: 2
+rofi.bw: 0
+rofi.padding: 600
+rofi.hide-scrollbar: true
+rofi.width: 100
+rofi.line-margin: 15
+rofi.fullscreen: false
+rofi.fake-transparency: false
+rofi.color-window: #131722, #eebe5d, argb:00000000
+rofi.color-normal: argb:00000000, #85754C, argb:00000000, argb:00000000, #eebe5d
+rofi.color-urgent: argb:2ccc241d, #eebe5d, argb:00000000, #a54242, #eebe5d
+rofi.color-active: argb:2ccc241d, #eebe5d, argb:00000000, #4491ed, #eebe5d
