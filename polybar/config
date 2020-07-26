@@ -18,8 +18,8 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #191e2bfb
-background-alt = #191e2bfb
+background = #191e2b
+background-alt = #282f3e
 ;foreground = ${xrdb:color7:#222}
 foreground = #eebe5d
 foreground-alt = #555
@@ -36,34 +36,38 @@ height = 40
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 5
 line-color = #f00
 
 ;border-size = 4
 ;border-color = #00000000
 
-padding-left = 0
-padding-right = 0
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = fixed:pixelsize=15;1
-font-1 = unifont:fontformat=truetype:size=15:antialias=false;0
-font-2 = hack:pixelsize=15;1
+font-0 = "Hack:style=Bold:pixelsize=15;1"
+font-1 = FontAwesome5Free:style=Regular:pixelsize=15;1
+font-2 = FontAwesome5Free:style=Solid:pixelsize=15;1
+font-3 = FontAwesome5Brands:pixelsize=15;1
+;font-1 = "FontAwesome:style=Regular:pixelsize=15"
+;font-2 = "Hack:pixelsize=18;1"
 
-modules-left = bspwm i3
-modules-center = mpd
-modules-right = filesystem alsa pulseaudio memory cpu wlan eth battery temperature date powermenu
+modules-left = powermenu 
+modules-center = i3
+modules-right = pulseaudio memory eth battery temperature wlan date
 
 tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
+
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -132,6 +136,7 @@ label-empty-padding = 2
 ; label-separator = |
 
 [module/i3]
+label-active-font = 2
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
@@ -248,7 +253,7 @@ interface = enx3ce1a1231d52
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
@@ -277,7 +282,7 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
@@ -384,14 +389,16 @@ ramp-foreground = ${colors.foreground-alt}
 [module/powermenu]
 type = custom/menu
 
+label-moutned-margin = 3
+
 expand-right = true
 
 format-spacing = 1
 
-label-open = 
-label-open-foreground = ${colors.secondary}
+label-open = 
+label-open-foreground = ${colors.primary}
 label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.primary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 

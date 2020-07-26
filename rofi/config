@@ -5,7 +5,7 @@ rofi.terminal: uxvrt
 rofi.show-icons: true
 rofi.matching: fuzzy
 rofi.lines: 8
-rofi.columns: 2
+rofi.columns: 1
 rofi.bw: 0
 rofi.padding: 600
 rofi.hide-scrollbar: true
